@@ -18,7 +18,7 @@
   });
 </script>
 
-<title>180-Day OPD Engine for Single-Unit Hospitals | Qlarify Health</title>
+<title>180-Day OPD Sprint for Single-Unit Hospitals | Qlarify Health</title>
 <meta name="description" content="A 6-month patient acquisition engine for single-unit hospitals in India. SEO, doctor brand, paid ads, Google reviews. Start with a free 48-hour audit." />
 <link rel="canonical" href="https://180days.qlarify.health/" />
 <meta name="theme-color" content="#e8835f" />
@@ -30,7 +30,7 @@
 <!-- Open Graph (for WhatsApp, LinkedIn, Facebook share previews) -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Qlarify Health" />
-<meta property="og:title" content="180-Day OPD Engine for Single-Unit Hospitals" />
+<meta property="og:title" content="180-Day OPD Sprint for Single-Unit Hospitals" />
 <meta property="og:description" content="A 6-month patient acquisition engine for single-unit hospitals in India. Start with a free 48-hour audit. No deck. No pitch. No commitment." />
 <meta property="og:url" content="https://180days.qlarify.health/" />
 <meta property="og:image" content="https://qlarify.health/og-images/home.png" />
@@ -40,7 +40,7 @@
 
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="180-Day OPD Engine for Single-Unit Hospitals" />
+<meta name="twitter:title" content="180-Day OPD Sprint for Single-Unit Hospitals" />
 <meta name="twitter:description" content="A 6-month patient acquisition engine for single-unit hospitals in India. Free 48-hour audit." />
 <meta name="twitter:image" content="https://qlarify.health/og-images/home.png" />
 
@@ -75,7 +75,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "180-Day OPD Engine",
+  "name": "180-Day OPD Sprint",
   "serviceType": "Hospital Digital Marketing",
   "provider": {"@type": "Organization", "name": "Qlarify Health", "url": "https://qlarify.health"},
   "areaServed": {"@type": "Country", "name": "India"},
@@ -425,6 +425,59 @@
     letter-spacing: -0.3px;
   }
 
+  /* ─── About section (3 cards) ─── */
+  .about { background: linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 100%); padding: 96px 0; }
+  .about .section-title em { color: var(--rust); }
+  .about-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px;
+  }
+  .about-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 36px 32px;
+    position: relative;
+    transition: all 0.25s ease;
+    display: flex; flex-direction: column;
+  }
+  .about-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--rust-border);
+  }
+  .about-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--rust), var(--rust-dk));
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+  .about-card .label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 700; color: var(--rust-dk);
+    letter-spacing: 0.15em; text-transform: uppercase; margin: 6px 0 10px;
+  }
+  .about-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px; color: var(--ink); font-weight: 700;
+    margin: 0 0 14px; line-height: 1.2; letter-spacing: -0.4px;
+  }
+  .about-card .stat {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px; color: var(--rust-dk); font-weight: 700;
+    line-height: 1; margin-bottom: 6px;
+  }
+  .about-card .stat-label {
+    font-size: 12px; color: var(--slate); text-transform: uppercase;
+    letter-spacing: 0.08em; font-weight: 600; margin-bottom: 18px;
+  }
+  .about-card p {
+    font-size: 15px; color: var(--ink-85); line-height: 1.6; margin: 0 0 14px;
+  }
+  .about-card .meta {
+    margin-top: auto; padding-top: 18px; border-top: 1px solid var(--border-light);
+    font-size: 13px; color: var(--slate);
+  }
+  .about-card .meta strong { color: var(--ink); font-weight: 600; }
+
   /* ─── Problem section (dark) ─── */
   .problem { background: var(--ink); color: var(--white); padding: 88px 0; }
   .problem .eyebrow { color: var(--rust); }
@@ -745,6 +798,10 @@
     .logo-grid { grid-template-columns: repeat(4, 1fr); gap: 24px 18px; }
     .logo-grid img { max-height: 40px; }
     .problem-grid { grid-template-columns: 1fr; gap: 16px; }
+    .about-grid { grid-template-columns: 1fr; gap: 18px; }
+    .about-card { padding: 28px 24px; }
+    .about-card h3 { font-size: 22px; }
+    .about-card .stat { font-size: 30px; }
     .phase-grid { grid-template-columns: 1fr; }
     .mile-grid { grid-template-columns: 1fr 1fr; }
     .price-grid { grid-template-columns: 1fr; }
@@ -796,6 +853,7 @@
       <span class="tag">A Digitinize<br>Creative Company</span>
     </a>
     <nav class="nav-links">
+      <a href="#about">About</a>
       <a href="#what">What we build</a>
       <a href="#pricing">Pricing</a>
       <a href="#commitment">Our commitment</a>
@@ -811,12 +869,12 @@
     <div class="hero-grid">
       <div>
         <div class="chip-row">
-          <span class="chip"><span class="dot"></span> 180-Day OPD Engine</span>
+          <span class="chip"><span class="dot"></span> 180-Day OPD Sprint</span>
           <span class="chip-quiet">For single-unit hospitals · India</span>
         </div>
-        <h1 class="h-serif">Busy marketing.<br><em>Quiet OPD?</em></h1>
+        <h1 class="h-serif">180-Day OPD Sprint.<br><em>For India's single-unit hospitals.</em></h1>
         <p class="hero-lede">
-          A six-month patient acquisition engine for single-unit hospitals in India. SEO, doctor brand, paid ads, patient re-engagement, Google reviews. Built around <em>your</em> hospital and the city it serves.
+          A six-month patient acquisition sprint for single-unit hospitals in India. SEO, doctor brand, paid ads, patient re-engagement, Google reviews. The same patient-acquisition system the chains take for granted &mdash; built around <em>your</em> hospital and the city it serves.
         </p>
         <p class="hero-sub">
           Not six services. <em style="color: var(--rust-dk); font-style: italic; font-weight: 600;">One system.</em> Measured monthly. Exit gates at Day 30, 60, and 90 if it isn't working. Start with a free 48-hour audit of how patients find your hospital online. No pitch attached.
@@ -845,7 +903,7 @@
       <form id="audit" class="form-card" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleAuditSubmit(event)">
         <!-- Web3Forms config: get your access_key for free at https://web3forms.com (just enter info@qlarify.health) -->
         <input type="hidden" name="access_key" value="9d24ab4d-33de-4076-9f42-77aab943b9ab" />
-        <input type="hidden" name="subject" value="New 180-Day OPD Engine audit request" />
+        <input type="hidden" name="subject" value="New 180-Day OPD Sprint audit request" />
         <input type="hidden" name="from_name" value="180daysprint.qlarify.health" />
         <input type="hidden" name="redirect" value="false" />
         <!-- Honeypot: bots fill this; humans ignore it. Web3Forms drops these silently. -->
@@ -929,6 +987,51 @@
       <div class="trust-meta-item"><strong>17+</strong> hospital partnerships</div>
       <div class="trust-meta-item"><strong>10+ yrs</strong> inside hospital marketing</div>
       <div class="trust-meta-item"><strong>India</strong> Tier 1 &amp; Tier 2</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════ About -->
+<section id="about" class="about">
+  <div class="container">
+    <span class="eyebrow">About us</span>
+    <h2 class="section-title h-serif">Two brands. <em>One offer for India's single-unit hospitals.</em></h2>
+    <p class="section-lede">
+      Qlarify Health is built on top of a decade of healthcare marketing experience from the agency that incubated it. Here's how the three pieces fit together.
+    </p>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="label">01 &middot; Parent agency</div>
+        <h3>Digitinize Creative</h3>
+        <div class="stat">10+ yrs</div>
+        <div class="stat-label">Working with India's B2B brands</div>
+        <p>
+          A marketing agency with a decade of experience working alongside B2B clients across healthcare, education, and enterprise. Worked with India's leading hospital systems on brand, performance, and content engagements.
+        </p>
+        <div class="meta"><strong>Founded</strong> 2015 &nbsp;&middot;&nbsp; Bengaluru</div>
+      </div>
+
+      <div class="about-card">
+        <div class="label">02 &middot; New brand</div>
+        <h3>Qlarify Health</h3>
+        <div class="stat">2026</div>
+        <div class="stat-label">Built exclusively for hospitals</div>
+        <p>
+          The healthcare-only brand from the Digitinize house. Built specifically to serve hospitals in India &mdash; with patient-journey thinking, NMC-compliant content frameworks, and outcome-first measurement that other agencies don't bring to healthcare.
+        </p>
+        <div class="meta"><strong>Focus</strong> Hospitals only &nbsp;&middot;&nbsp; Pan-India</div>
+      </div>
+
+      <div class="about-card">
+        <div class="label">03 &middot; The offer</div>
+        <h3>180-Day OPD Sprint</h3>
+        <div class="stat">180 days</div>
+        <div class="stat-label">For single-unit hospitals</div>
+        <p>
+          A six-month engagement designed specifically for single-unit hospitals (50&ndash;300 beds, owner-doctor led). SEO, doctor brand, paid acquisition, patient re-engagement, Google reviews &mdash; the same patient-acquisition system the chains take for granted.
+        </p>
+        <div class="meta"><strong>Three pricing options</strong> &nbsp;&middot;&nbsp; Exit gates at Day 30 / 60 / 90</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1209,7 +1312,7 @@
 <section class="final-cta">
   <div class="container">
     <h2 class="h-serif">See what your patients see <em>before</em> you commit.</h2>
-    <p>A free 48-hour audit is the only way to start. We'll show you exactly where you're missing. Then you decide whether the 180-Day OPD Engine is worth a 30-minute call.</p>
+    <p>A free 48-hour audit is the only way to start. We'll show you exactly where you're missing. Then you decide whether the 180-Day OPD Sprint is worth a 30-minute call.</p>
     <a href="#audit" class="btn-primary">Claim the free audit →</a>
     <span class="alt">Or message us on <a href="https://wa.me/918147410751?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20180-Day%20OPD%20Engine%20for%20my%20hospital." onclick="if(window.gtag){window.gtag('event','whatsapp_click',{source:'180days.qlarify.health'});}if(window.dataLayer){window.dataLayer.push({event:'whatsapp_click'});}">WhatsApp</a>.</span>
   </div>

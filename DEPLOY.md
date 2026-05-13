@@ -8,7 +8,7 @@ GitHub → Vercel → custom subdomain. Form goes through Web3Forms (no backend 
 cd 180daysprint-deploy
 git init -b main
 git add .
-git commit -m "Initial: 180-Day OPD Engine landing page"
+git commit -m "Initial: 180-Day OPD Sprint landing page"
 git remote add origin https://github.com/Qlarify/180-days-.git
 git push -u origin main
 ```

@@ -1,6 +1,6 @@
 # 180daysprint.qlarify.health
 
-Landing page for the **180-Day OPD Engine** offer, targeting single-unit hospitals in India.
+Landing page for the **180-Day OPD Sprint** offer, targeting single-unit hospitals in India.
 
 ## Stack
 
