@@ -744,7 +744,14 @@
       </div>
 
       <!-- Audit form -->
-      <form id="audit" class="form-card" action="/api/lead" method="POST" onsubmit="return handleAuditSubmit(event)">
+      <form id="audit" class="form-card" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleAuditSubmit(event)">
+        <!-- Web3Forms config: get your access_key for free at https://web3forms.com (just enter info@qlarify.health) -->
+        <input type="hidden" name="access_key" value="9d24ab4d-33de-4076-9f42-77aab943b9ab" />
+        <input type="hidden" name="subject" value="New 180-Day OPD Engine audit request" />
+        <input type="hidden" name="from_name" value="180daysprint.qlarify.health" />
+        <input type="hidden" name="redirect" value="false" />
+        <!-- Honeypot: bots fill this; humans ignore it. Web3Forms drops these silently. -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="form-eyebrow">Free · 48-hour audit</div>
         <h2 class="form-title">Catchment Visibility Audit</h2>
         <p class="form-sub">Written report. No deck. No pitch. No commitment. The entry point to the 180-Day OPD Engine, or just a free read on your catchment.</p>
@@ -1151,6 +1158,7 @@
     const status = document.getElementById('form-status');
     const submit = document.getElementById('audit-submit');
     const data = Object.fromEntries(new FormData(form).entries());
+    // Annotate the payload so the inbox email shows where it came from
     data.source = '180daysprint.qlarify.health';
     data.submitted_at = new Date().toISOString();
 
@@ -1165,7 +1173,10 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error('Submission failed (HTTP ' + res.status + ')');
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || out.success === false) {
+        throw new Error(out.message || ('HTTP ' + res.status));
+      }
       form.reset();
       status.style.color = '#163460';
       status.innerHTML = '<strong>Got it.</strong> Your audit will arrive within 48 hours, by email and WhatsApp.';
