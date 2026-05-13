@@ -1,0 +1,10 @@
+{
+  "name": "180daysprint-qlarify",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Qlarify Health - 180-Day OPD Engine landing page (180daysprint.qlarify.health)",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  }
+}
